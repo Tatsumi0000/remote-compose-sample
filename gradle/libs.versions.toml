@@ -8,6 +8,8 @@ lifecycleRuntimeKtx = "2.6.1"
 activityCompose = "1.8.0"
 kotlin = "2.0.21"
 composeBom = "2024.09.00"
+remoteCompose = "1.0.0-alpha05"
+remotePlayerCompose = "1.0.0-alpha05"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -25,7 +27,32 @@ androidx-compose-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-
 androidx-compose-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-compose-material3 = { group = "androidx.compose.material3", name = "material3" }
 
+# Remote Composeのライブラリたち
+remote-core = { group = "androidx.compose.remote", name = "remote-core", version.ref = "remoteCompose" }
+remote-creation = { group = "androidx.compose.remote", name = "remote-creation", version.ref = "remoteCompose" }
+remote-creation-core = { group = "androidx.compose.remote", name = "remote-creation-core", version.ref = "remoteCompose" }
+remote-creation-android = { group = "androidx.compose.remote", name = "remote-creation-android", version.ref = "remoteCompose" }
+remote-creation-compose = { group = "androidx.compose.remote", name = "remote-creation-compose", version.ref = "remoteCompose" }
+# Remote Compose を読み取るためのライブラリたち
+remote-player-core = { group = "androidx.compose.remote", name = "remote-player-core", version.ref = "remoteCompose" }
+remote-player-view = { group = "androidx.compose.remote", name = "remote-player-view", version.ref = "remoteCompose" }
+remote-tooling-preview = { group = "androidx.compose.remote", name = "remote-tooling-preview", version.ref = "remoteCompose" }
+remote-player-compose = { group = "androidx.compose.remote", name = "remote-player-compose", version.ref = "remotePlayerCompose" }
+
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+
+[bundles]
+remote-compose-full = [
+    "remote-core",
+    "remote-creation",
+    "remote-creation-core",
+    "remote-creation-android",
+    "remote-creation-compose",
+    "remote-player-core",
+    "remote-player-view",
+    "remote-tooling-preview",
+    "remote-player-compose"
+]
 
