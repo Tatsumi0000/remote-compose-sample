@@ -22,7 +22,7 @@ fun createYellowButtonRemoteCompose(): RemoteComposeWriter {
         platform = AndroidxRcPlatformServices(),
         ) {
         root {
-            box(RecordingModifier()
+            box(RecordingModifier().fillMaxSize()
                 .background(Color.YELLOW) // 元の質問に合わせてYELLOWに
                 .onClick(HostAction(100))
             ) {
