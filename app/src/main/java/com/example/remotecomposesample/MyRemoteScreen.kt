@@ -19,8 +19,9 @@ fun MyRemoteScreen() {
     if (remoteDocument != null) {
         RemoteDocumentPlayer(
             document = remoteDocument.document,
+            documentWidth = 500,
+            documentHeight = 300,
             modifier = Modifier
-                .fillMaxSize()
                 .background(Color.Red),
             onAction = { id, res ->
                 when (id) {
@@ -28,8 +29,6 @@ fun MyRemoteScreen() {
                 }
                 println("id=${id}, res=${res}")
             },
-            documentWidth = 0,
-            documentHeight = 0,
             debugMode = 0,
         )
     }

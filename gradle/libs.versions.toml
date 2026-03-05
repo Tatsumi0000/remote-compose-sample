@@ -9,7 +9,6 @@ activityCompose = "1.8.0"
 kotlin = "2.0.21"
 composeBom = "2024.09.00"
 remoteCompose = "1.0.0-alpha05"
-remotePlayerCompose = "1.0.0-alpha05"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -37,7 +36,7 @@ remote-creation-compose = { group = "androidx.compose.remote", name = "remote-cr
 remote-player-core = { group = "androidx.compose.remote", name = "remote-player-core", version.ref = "remoteCompose" }
 remote-player-view = { group = "androidx.compose.remote", name = "remote-player-view", version.ref = "remoteCompose" }
 remote-tooling-preview = { group = "androidx.compose.remote", name = "remote-tooling-preview", version.ref = "remoteCompose" }
-remote-player-compose = { group = "androidx.compose.remote", name = "remote-player-compose", version.ref = "remotePlayerCompose" }
+remote-player-compose = { group = "androidx.compose.remote", name = "remote-player-compose", version.ref = "remoteCompose" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

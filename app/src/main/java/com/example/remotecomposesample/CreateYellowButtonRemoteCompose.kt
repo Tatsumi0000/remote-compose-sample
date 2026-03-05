@@ -14,16 +14,16 @@ import androidx.compose.remote.creation.platform.AndroidxRcPlatformServices
 @SuppressLint("RestrictedApi")
 fun createYellowButtonRemoteCompose(): RemoteComposeWriter {
     return RemoteComposeContextAndroid(
-        width = 300,
-        height = 10,
+        width = 500,
+        height = 300,
         contentDescription = "Yellow Button",
         apiLevel = 6,
         profiles = 0,
         platform = AndroidxRcPlatformServices(),
         ) {
         root {
-            box(RecordingModifier().fillMaxSize()
-                .background(Color.YELLOW) // 元の質問に合わせてYELLOWに
+            box(RecordingModifier()
+                .background(Color.YELLOW)
                 .onClick(HostAction(100))
             ) {
                 text("This is Button!")
